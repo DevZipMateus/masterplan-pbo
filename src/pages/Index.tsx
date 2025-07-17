@@ -23,26 +23,12 @@ const Index = () => {
         <main className="flex-grow">
           <Hero />
           
-          {/* Sections with watercolor background */}
-          <div 
-            className="relative"
-            style={{
-              backgroundImage: 'url(/lovable-uploads/7e536339-b4a7-4037-8ecd-af918b49d5b8.png)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundAttachment: 'fixed'
-            }}
-          >
-            {/* Background overlay for better content readability */}
-            <div className="absolute inset-0 bg-white/85 z-0"></div>
-            
-            <div className="relative z-10">
-              <Services />
-              <AboutUs />
-              <EgestorERP />
-              <Contact />
-            </div>
+          {/* Sections with turquoise background */}
+          <div className="bg-cyan-500">
+            <Services />
+            <AboutUs />
+            <EgestorERP />
+            <Contact />
           </div>
         </main>
         
