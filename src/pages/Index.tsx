@@ -16,19 +16,33 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
+    <div 
+      className="min-h-screen flex flex-col"
+      style={{
+        backgroundImage: 'url(/lovable-uploads/6b3f494d-f3be-450a-ac0f-f3b3bcebba3a.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Background overlay for better content readability */}
+      <div className="absolute inset-0 bg-white/90 z-0"></div>
       
-      <main className="flex-grow">
-        <Hero />
-        <Services />
-        <AboutUs />
-        <EgestorERP />
-        <Contact />
-      </main>
-      
-      <Footer />
-      <FloatingButton />
+      <div className="relative z-10">
+        <Header />
+        
+        <main className="flex-grow">
+          <Hero />
+          <Services />
+          <AboutUs />
+          <EgestorERP />
+          <Contact />
+        </main>
+        
+        <Footer />
+        <FloatingButton />
+      </div>
     </div>
   );
 };
