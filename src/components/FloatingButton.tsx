@@ -6,6 +6,8 @@ import { useIsMobile } from '../hooks/use-mobile';
 const FloatingButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isPulsing, setIsPulsing] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const isMobile = useIsMobile();
 
   // Start pulsing effect every 8 seconds
@@ -19,6 +21,28 @@ const FloatingButton = () => {
     return () => clearInterval(interval);
   }, [isOpen]);
 
+  // Handle scroll behavior
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show button when scrolling up or at top
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        setIsVisible(true);
+      } 
+      // Hide button when scrolling down (after 100px from top)
+      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+        setIsOpen(false); // Close menu when hiding
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   const handleMainButtonClick = () => {
     // Go directly to WhatsApp
     window.open('https://wa.me/5516997882208', '_blank', 'noopener,noreferrer');
@@ -30,9 +54,11 @@ const FloatingButton = () => {
   };
 
   return (
-    <div className={`fixed z-50 ${
+    <div className={`fixed z-50 transition-all duration-500 ease-in-out ${
+      isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0 pointer-events-none'
+    } ${
       isMobile 
-        ? 'bottom-4 right-4' 
+        ? 'bottom-4 right-2' // Mais à direita em mobile
         : 'bottom-6 right-6 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10'
     }`}>
       {/* Contact Options - Hidden for now since main button goes to WhatsApp */}
