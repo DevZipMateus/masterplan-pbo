@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Instagram, Users, Heart, MessageCircle } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const Hero = () => {
@@ -82,56 +81,60 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Right Column - Visual */}
+          {/* Right Column - Instagram Section */}
           <div className="lg:w-1/2 animate-fade-in" style={{ animationDelay: '0.5s' }}>
             <div className="relative">
-              {/* Main image/illustration would go here */}
+              {/* Instagram showcase */}
               <div className="bg-gradient-to-br from-white/20 to-accent/20 rounded-2xl p-8 md:p-12 shadow-lg">
                 <div className="bg-white rounded-xl p-6 shadow-sm mb-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
-                      <div className="w-3 h-3 bg-masterplan-teal rounded-full mr-3"></div>
-                      <span className="text-sm font-medium text-masterplan-gray">Gestão Financeira</span>
+                      <Instagram className="text-pink-500 mr-3" size={24} />
+                      <span className="text-lg font-bold text-masterplan-gray">@masterplan_financas</span>
                     </div>
-                    <div className="text-sm text-masterplan-gray">Automatizada</div>
+                    <div className="flex items-center text-sm text-masterplan-gray">
+                      <Users className="mr-1" size={16} />
+                      <span>5.2k</span>
+                    </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-sm text-masterplan-gray">Contas a Pagar</span>
-                      <span className="text-sm font-medium">R$ 125.000</span>
+                      <span className="text-sm text-masterplan-gray">Dicas financeiras diárias</span>
+                      <Heart className="text-red-500" size={16} />
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-sm text-masterplan-gray">Contas a Receber</span>
-                      <span className="text-sm font-medium text-masterplan-teal">R$ 180.000</span>
+                      <span className="text-sm text-masterplan-gray">Stories exclusivos</span>
+                      <MessageCircle className="text-masterplan-teal" size={16} />
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-masterplan-teal h-2 rounded-full w-3/4"></div>
+                      <div className="bg-gradient-to-r from-pink-500 to-purple-500 h-2 rounded-full w-4/5"></div>
                     </div>
+                    <p className="text-xs text-masterplan-gray">Engajamento em crescimento</p>
                   </div>
                 </div>
                 
                 <div className="bg-white rounded-xl p-6 shadow-sm">
                   <div className="flex items-center mb-4">
-                    <div className="w-3 h-3 bg-accent rounded-full mr-3"></div>
-                    <span className="text-sm font-medium text-masterplan-gray">Análise em Tempo Real</span>
+                    <div className="w-3 h-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mr-3"></div>
+                    <span className="text-sm font-medium text-masterplan-gray">Conteúdo Exclusivo</span>
                   </div>
-                  <div className="text-2xl font-bold text-masterplan-dark-gray mb-2">95%</div>
-                  <div className="text-sm text-masterplan-gray">Redução no tempo de processos</div>
+                  <div className="text-2xl font-bold text-masterplan-dark-gray mb-2">Todos os dias</div>
+                  <div className="text-sm text-masterplan-gray">Dicas de gestão financeira</div>
                 </div>
               </div>
               
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4 animate-float" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center">
-                  <CheckCircle className="text-masterplan-teal mr-2" size={16} />
-                  <span className="text-sm font-medium text-masterplan-gray">Controle Total</span>
+                  <Instagram className="text-pink-500 mr-2" size={16} />
+                  <span className="text-sm font-medium text-masterplan-gray">Siga-nos</span>
                 </div>
               </div>
               
               <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4 animate-float" style={{ animationDelay: '3s' }}>
                 <div className="flex items-center">
                   <CheckCircle className="text-accent mr-2" size={16} />
-                  <span className="text-sm font-medium text-masterplan-gray">Decisões Assertivas</span>
+                  <span className="text-sm font-medium text-masterplan-gray">Conteúdo Diário</span>
                 </div>
               </div>
             </div>
