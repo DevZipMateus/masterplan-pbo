@@ -37,22 +37,22 @@ const AboutUs = () => {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Left Column - Content */}
           <div className="lg:w-1/2">
-            <div className="inline-block bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm mb-6 animate-fade-in">
+            <div className="inline-block bg-white/20 text-white font-medium px-4 py-2 rounded-full text-sm mb-6 animate-fade-in">
               Sobre a Masterplan
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-masterplan-dark-gray mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               Transformando a gestão financeira há{' '}
-              <span className="text-primary">mais de 15 anos</span>
+              <span className="text-blue-200">mais de 15 anos</span>
             </h2>
             
-            <div className="space-y-6 text-lg text-masterplan-gray leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-6 text-lg text-white/90 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <p>
-                A <strong className="text-masterplan-dark-gray">Masterplan BPO Financeiro</strong> nasceu com o propósito de transformar a forma como empresas lidam com sua gestão financeira. Com uma equipe formada por profissionais com mais de 15 anos de experiência no mercado financeiro, unimos conhecimento técnico, visão estratégica e tecnologia para oferecer soluções completas.
+                A <strong className="text-white">Masterplan BPO Financeiro</strong> nasceu com o propósito de transformar a forma como empresas lidam com sua gestão financeira. Com uma equipe formada por profissionais com mais de 15 anos de experiência no mercado financeiro, unimos conhecimento técnico, visão estratégica e tecnologia para oferecer soluções completas.
               </p>
               
               <p>
-                Nossa <strong className="text-primary">missão</strong> é simplificar a rotina financeira dos nossos clientes, garantindo controle, organização e informações confiáveis para decisões mais assertivas.
+                Nossa <strong className="text-blue-200">missão</strong> é simplificar a rotina financeira dos nossos clientes, garantindo controle, organização e informações confiáveis para decisões mais assertivas.
               </p>
               
               <p>
@@ -63,26 +63,26 @@ const AboutUs = () => {
             {/* Key Achievements */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">15+</div>
-                <div className="text-sm text-masterplan-gray">Anos de Experiência</div>
+                <div className="text-3xl font-bold text-white mb-2">15+</div>
+                <div className="text-sm text-white/80">Anos de Experiência</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">100+</div>
-                <div className="text-sm text-masterplan-gray">Empresas Atendidas</div>
+                <div className="text-3xl font-bold text-white mb-2">100+</div>
+                <div className="text-sm text-white/80">Empresas Atendidas</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">95%</div>
-                <div className="text-sm text-masterplan-gray">Satisfação dos Clientes</div>
+                <div className="text-3xl font-bold text-white mb-2">95%</div>
+                <div className="text-sm text-white/80">Satisfação dos Clientes</div>
               </div>
             </div>
           </div>
           
           {/* Right Column - Values */}
           <div className="lg:w-1/2">
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg animate-fade-in border border-white/20" style={{ animationDelay: '0.4s' }}>
               <div className="flex items-center mb-8">
-                <Target className="text-primary mr-3" size={32} />
-                <h3 className="text-2xl font-heading font-bold text-masterplan-dark-gray">Nossos Valores</h3>
+                <Target className="text-cyan-600 mr-3" size={32} />
+                <h3 className="text-2xl font-heading font-bold text-gray-800">Nossos Valores</h3>
               </div>
               
               <div className="space-y-6">
@@ -92,14 +92,14 @@ const AboutUs = () => {
                     className="flex items-start group animate-fade-in"
                     style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                   >
-                    <div className="bg-white p-3 rounded-xl shadow-sm mr-4 group-hover:shadow-md transition-shadow duration-300">
-                      <value.icon className="text-primary" size={24} />
+                    <div className="bg-white p-3 rounded-xl shadow-sm mr-4 group-hover:shadow-md transition-shadow duration-300 border border-cyan-100">
+                      <value.icon className="text-cyan-600" size={24} />
                     </div>
                     <div>
-                      <h4 className="text-lg font-heading font-semibold text-masterplan-dark-gray mb-2 group-hover:text-primary transition-colors duration-300">
+                      <h4 className="text-lg font-heading font-semibold text-gray-800 mb-2 group-hover:text-cyan-600 transition-colors duration-300">
                         {value.title}
                       </h4>
-                      <p className="text-masterplan-gray leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed">
                         {value.description}
                       </p>
                     </div>
@@ -111,7 +111,7 @@ const AboutUs = () => {
         </div>
         
         {/* Mission Statement */}
-        <div className="mt-16 bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-center text-white shadow-lg animate-fade-in" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white shadow-lg animate-fade-in border border-blue-400/30" style={{ animationDelay: '0.8s' }}>
           <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">
             Nossa Missão
           </h3>

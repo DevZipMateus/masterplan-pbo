@@ -8,7 +8,7 @@ const services = [
     title: 'Gestão de Contas a Pagar e Receber',
     description: 'Controle total sobre fluxo de caixa com organização e acompanhamento detalhado de todas as movimentações financeiras.',
     icon: Calculator,
-    color: 'from-primary/20 to-primary/10',
+    color: 'from-white/30 to-white/10',
     delay: '0s'
   },
   {
@@ -16,7 +16,7 @@ const services = [
     title: 'Agendamento de Pagamentos',
     description: 'Automatização e programação inteligente de pagamentos, garantindo pontualidade e otimização do fluxo de caixa.',
     icon: CreditCard,
-    color: 'from-accent/20 to-accent/10',
+    color: 'from-white/30 to-white/10',
     delay: '0.1s'
   },
   {
@@ -24,7 +24,7 @@ const services = [
     title: 'Emissão de Notas e Boletos',
     description: 'Geração automatizada de documentos fiscais e instrumentos de cobrança com total conformidade legal.',
     icon: FileText,
-    color: 'from-masterplan-light-blue/30 to-masterplan-light-blue/10',
+    color: 'from-white/30 to-white/10',
     delay: '0.2s'
   },
   {
@@ -32,7 +32,7 @@ const services = [
     title: 'Custos e Precificação',
     description: 'Análise detalhada de custos e estruturação de preços estratégicos para maximizar a rentabilidade.',
     icon: PieChart,
-    color: 'from-primary/20 to-primary/10',
+    color: 'from-white/30 to-white/10',
     delay: '0.3s'
   },
   {
@@ -40,7 +40,7 @@ const services = [
     title: 'Consultoria Financeira',
     description: 'Orientação especializada para tomada de decisões estratégicas e planejamento financeiro corporativo.',
     icon: Users,
-    color: 'from-accent/20 to-accent/10',
+    color: 'from-white/30 to-white/10',
     delay: '0.4s'
   },
   {
@@ -48,7 +48,7 @@ const services = [
     title: 'Análise de Viabilidade Financeira',
     description: 'Estudos completos de viabilidade para novos projetos e investimentos empresariais.',
     icon: TrendingUp,
-    color: 'from-masterplan-light-blue/30 to-masterplan-light-blue/10',
+    color: 'from-white/30 to-white/10',
     delay: '0.5s'
   },
   {
@@ -56,7 +56,7 @@ const services = [
     title: 'Valuation Empresarial',
     description: 'Avaliação precisa do valor de mercado da empresa para processos de fusão, aquisição ou investimento.',
     icon: Target,
-    color: 'from-primary/20 to-primary/10',
+    color: 'from-white/30 to-white/10',
     delay: '0.6s'
   },
   {
@@ -64,7 +64,7 @@ const services = [
     title: 'Finanças Pessoais',
     description: 'Gestão e planejamento financeiro personalizado para executivos e empresários.',
     icon: DollarSign,
-    color: 'from-accent/20 to-accent/10',
+    color: 'from-white/30 to-white/10',
     delay: '0.7s'
   }
 ];
@@ -75,13 +75,13 @@ const Services = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-block bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm mb-6">
+          <div className="inline-block bg-white/20 text-white font-medium px-4 py-2 rounded-full text-sm mb-6">
             Nossos Serviços
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-masterplan-dark-gray mb-6">
-            Soluções completas em <span className="text-primary">BPO Financeiro</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
+            Soluções completas em <span className="text-blue-200">BPO Financeiro</span>
           </h2>
-          <p className="text-lg md:text-xl text-masterplan-gray leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
             Oferecemos um portfólio abrangente de serviços financeiros, desde gestão operacional 
             até consultoria estratégica, sempre com foco na excelência e resultados.
           </p>
@@ -92,16 +92,16 @@ const Services = () => {
           {services.map((service) => (
             <div 
               key={service.id} 
-              className="group bg-white rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300 animate-fade-in card-hover"
+              className="group bg-white/95 backdrop-blur-sm rounded-xl p-6 lg:p-8 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 animate-fade-in card-hover border border-white/20"
               style={{ animationDelay: service.delay }}
             >
-              <div className={`bg-gradient-to-br ${service.color} p-4 rounded-xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className="text-masterplan-dark-gray" size={28} />
+              <div className={`bg-gradient-to-br ${service.color} p-4 rounded-xl inline-block mb-6 group-hover:scale-110 transition-transform duration-300 border border-cyan-200`}>
+                <service.icon className="text-cyan-700" size={28} />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-4 text-masterplan-dark-gray group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-gray-800 group-hover:text-cyan-700 transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-masterplan-gray leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -110,11 +110,11 @@ const Services = () => {
         
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-masterplan-dark-gray mb-4">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-lg border border-white/20">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-gray-800 mb-4">
               Pronto para transformar sua gestão financeira?
             </h3>
-            <p className="text-lg text-masterplan-gray mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Entre em contato conosco e descubra como nossa experiência de mais de 15 anos 
               pode otimizar os processos financeiros da sua empresa.
             </p>
@@ -122,7 +122,7 @@ const Services = () => {
               href="https://wa.me/5516997882208" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-primary inline-flex items-center group"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-cyan-500/50 shadow-sm font-medium inline-flex items-center group"
               aria-label="Solicitar consultoria via WhatsApp"
             >
               <span>Solicitar Consultoria</span>

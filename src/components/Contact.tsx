@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
@@ -57,13 +58,13 @@ const Contact = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm mb-6">
+          <div className="inline-block bg-white/20 text-white font-medium px-4 py-2 rounded-full text-sm mb-6">
             Entre em Contato
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-masterplan-dark-gray mb-6">
-            Vamos conversar sobre o <span className="text-primary">futuro financeiro</span> da sua empresa
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
+            Vamos conversar sobre o <span className="text-blue-200">futuro financeiro</span> da sua empresa
           </h2>
-          <p className="text-lg md:text-xl text-masterplan-gray leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
             Nossa equipe está pronta para entender suas necessidades e apresentar 
             as melhores soluções em gestão financeira.
           </p>
@@ -73,20 +74,20 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="animate-fade-in">
-              <h3 className="text-2xl font-heading font-bold text-masterplan-dark-gray mb-6">
+              <h3 className="text-2xl font-heading font-bold text-white mb-6">
                 Informações de Contato
               </h3>
               
               <div className="space-y-6">
                 <div className="flex items-start group">
-                  <div className="bg-primary/10 p-3 rounded-xl mr-4 group-hover:bg-primary/20 transition-colors duration-300">
-                    <Phone className="text-primary" size={24} />
+                  <div className="bg-white/20 p-3 rounded-xl mr-4 group-hover:bg-white/30 transition-colors duration-300 border border-white/30">
+                    <Phone className="text-white" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-masterplan-dark-gray mb-1">Telefone</h4>
+                    <h4 className="font-semibold text-white mb-1">Telefone</h4>
                     <a 
                       href="tel:+5516997882208" 
-                      className="text-masterplan-gray hover:text-primary transition-colors"
+                      className="text-white/80 hover:text-white transition-colors"
                       aria-label="Ligar para (16) 99788-2208"
                     >
                       (16) 99788-2208
@@ -95,14 +96,14 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start group">
-                  <div className="bg-primary/10 p-3 rounded-xl mr-4 group-hover:bg-primary/20 transition-colors duration-300">
-                    <Mail className="text-primary" size={24} />
+                  <div className="bg-white/20 p-3 rounded-xl mr-4 group-hover:bg-white/30 transition-colors duration-300 border border-white/30">
+                    <Mail className="text-white" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-masterplan-dark-gray mb-1">E-mail</h4>
+                    <h4 className="font-semibold text-white mb-1">E-mail</h4>
                     <a 
                       href="mailto:matheus@masterplanbpo.com.br" 
-                      className="text-masterplan-gray hover:text-primary transition-colors"
+                      className="text-white/80 hover:text-white transition-colors"
                       aria-label="Enviar email para matheus@masterplanbpo.com.br"
                     >
                       matheus@masterplanbpo.com.br
@@ -111,12 +112,12 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start group">
-                  <div className="bg-primary/10 p-3 rounded-xl mr-4 group-hover:bg-primary/20 transition-colors duration-300">
-                    <MapPin className="text-primary" size={24} />
+                  <div className="bg-white/20 p-3 rounded-xl mr-4 group-hover:bg-white/30 transition-colors duration-300 border border-white/30">
+                    <MapPin className="text-white" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-masterplan-dark-gray mb-1">Endereço</h4>
-                    <p className="text-masterplan-gray">
+                    <h4 className="font-semibold text-white mb-1">Endereço</h4>
+                    <p className="text-white/80">
                       Rua Valdecir Rodrigues Romero, 399<br />
                       Ribeirão Preto, SP<br />
                       CEP: 14056-520
@@ -125,12 +126,12 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start group">
-                  <div className="bg-primary/10 p-3 rounded-xl mr-4 group-hover:bg-primary/20 transition-colors duration-300">
-                    <Clock className="text-primary" size={24} />
+                  <div className="bg-white/20 p-3 rounded-xl mr-4 group-hover:bg-white/30 transition-colors duration-300 border border-white/30">
+                    <Clock className="text-white" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-masterplan-dark-gray mb-1">Horário de Atendimento</h4>
-                    <p className="text-masterplan-gray">
+                    <h4 className="font-semibold text-white mb-1">Horário de Atendimento</h4>
+                    <p className="text-white/80">
                       Segunda a Sexta: 8h às 18h<br />
                       Sábado: 8h às 12h
                     </p>
@@ -140,16 +141,16 @@ const Contact = () => {
             </div>
             
             {/* Quick Contact */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h4 className="font-heading font-semibold text-masterplan-dark-gray mb-4">Contato Rápido</h4>
-              <p className="text-masterplan-gray mb-4">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/20 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <h4 className="font-heading font-semibold text-gray-800 mb-4">Contato Rápido</h4>
+              <p className="text-gray-600 mb-4">
                 Prefere falar diretamente conosco? Entre em contato via WhatsApp para atendimento imediato.
               </p>
               <a 
                 href="https://wa.me/5516997882208" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-primary w-full inline-flex items-center justify-center group"
+                className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-cyan-500/50 shadow-sm font-medium w-full inline-flex items-center justify-center group"
                 aria-label="Contatar via WhatsApp"
               >
                 <svg className="mr-2" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -162,8 +163,8 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-gray-100">
-              <h3 className="text-2xl font-heading font-bold text-masterplan-dark-gray mb-6">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-white/20">
+              <h3 className="text-2xl font-heading font-bold text-gray-800 mb-6">
                 Envie sua Mensagem
               </h3>
               
@@ -171,7 +172,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-masterplan-dark-gray mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-800 mb-2">
                       Nome *
                     </label>
                     <input
@@ -181,13 +182,13 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-colors"
                       placeholder="Seu nome completo"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-masterplan-dark-gray mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-800 mb-2">
                       E-mail *
                     </label>
                     <input
@@ -197,7 +198,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-colors"
                       placeholder="seu@email.com"
                     />
                   </div>
@@ -205,7 +206,7 @@ const Contact = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-masterplan-dark-gray mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-800 mb-2">
                       Telefone
                     </label>
                     <input
@@ -214,13 +215,13 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-colors"
                       placeholder="(00) 00000-0000"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-masterplan-dark-gray mb-2">
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-800 mb-2">
                       Empresa
                     </label>
                     <input
@@ -229,14 +230,14 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-colors"
                       placeholder="Nome da sua empresa"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-masterplan-dark-gray mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-800 mb-2">
                     Mensagem *
                   </label>
                   <textarea
@@ -246,7 +247,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-vertical"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-colors resize-vertical"
                     placeholder="Conte-nos sobre suas necessidades em gestão financeira..."
                   ></textarea>
                 </div>
@@ -254,7 +255,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center group"
+                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-cyan-500/50 shadow-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center group"
                 >
                   {isSubmitting ? (
                     <>
