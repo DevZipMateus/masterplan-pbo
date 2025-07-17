@@ -1,97 +1,123 @@
 
 import React from 'react';
-import { Check, ArrowRight } from 'lucide-react';
+import { CheckCircle, Target, Heart, Shield, Lightbulb, Award } from 'lucide-react';
+
+const values = [
+  {
+    icon: Shield,
+    title: 'Transparência',
+    description: 'Atuamos com clareza e ética em todas as etapas do processo.'
+  },
+  {
+    icon: Heart,
+    title: 'Comprometimento',
+    description: 'Estamos ao lado do cliente em cada desafio, como verdadeiros parceiros de negócio.'
+  },
+  {
+    icon: Lightbulb,
+    title: 'Inovação',
+    description: 'Buscamos constantemente novas tecnologias e práticas para otimizar a gestão financeira.'
+  },
+  {
+    icon: CheckCircle,
+    title: 'Confiança',
+    description: 'Garantimos segurança e sigilo total das informações financeiras.'
+  },
+  {
+    icon: Award,
+    title: 'Excelência',
+    description: 'Entregamos resultados com qualidade, precisão e foco na melhoria contínua.'
+  }
+];
 
 const AboutUs = () => {
   return (
-    <section id="about" className="section bg-gray-50">
+    <section id="sobre" className="section bg-white">
       <div className="container-custom">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Left Column - Image */}
-          <div className="lg:w-1/2 animate-fade-in">
-            <div className="relative">
-              <div className="bg-corporate-blue/20 w-full h-full absolute -left-6 -top-6 rounded-lg"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                alt="Equipe de contabilidade trabalhando" 
-                className="relative z-10 rounded-lg shadow-lg w-full object-cover h-[400px]"
-              />
-              <div className="absolute -bottom-8 -right-8 bg-white rounded-lg shadow-lg p-6 z-20 animate-float">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-corporate-blue rounded-full mr-2"></div>
-                    <span className="text-sm font-medium text-gray-600">Desde 2010</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-corporate-lightBlue rounded-full mr-2"></div>
-                    <span className="text-sm font-medium text-gray-600">+500 clientes</span>
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-gray-900">13</div>
-                <div className="text-sm text-gray-600">Anos de experiência em contabilidade</div>
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
+          {/* Left Column - Content */}
+          <div className="lg:w-1/2">
+            <div className="inline-block bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm mb-6 animate-fade-in">
+              Sobre a Masterplan
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-masterplan-dark-gray mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              Transformando a gestão financeira há{' '}
+              <span className="text-primary">mais de 15 anos</span>
+            </h2>
+            
+            <div className="space-y-6 text-lg text-masterplan-gray leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <p>
+                A <strong className="text-masterplan-dark-gray">Masterplan BPO Financeiro</strong> nasceu com o propósito de transformar a forma como empresas lidam com sua gestão financeira. Com uma equipe formada por profissionais com mais de 15 anos de experiência no mercado financeiro, unimos conhecimento técnico, visão estratégica e tecnologia para oferecer soluções completas.
+              </p>
+              
+              <p>
+                Nossa <strong className="text-primary">missão</strong> é simplificar a rotina financeira dos nossos clientes, garantindo controle, organização e informações confiáveis para decisões mais assertivas.
+              </p>
+              
+              <p>
+                Acreditamos que uma boa gestão financeira é a base para o crescimento sustentável de qualquer empresa e estamos aqui para construir esse caminho ao seu lado.
+              </p>
+            </div>
+            
+            {/* Key Achievements */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">15+</div>
+                <div className="text-sm text-masterplan-gray">Anos de Experiência</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">100+</div>
+                <div className="text-sm text-masterplan-gray">Empresas Atendidas</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">95%</div>
+                <div className="text-sm text-masterplan-gray">Satisfação dos Clientes</div>
               </div>
             </div>
           </div>
           
-          {/* Right Column - Content */}
+          {/* Right Column - Values */}
           <div className="lg:w-1/2">
-            <div className="inline-block bg-corporate-blue/10 text-corporate-blue font-medium px-4 py-1.5 rounded-full text-sm mb-4 animate-fade-in">
-              Sobre Nós
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Excelência em serviços contábeis para o seu negócio
-            </h2>
-            <p className="text-gray-600 mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Desde 2010, nosso escritório se dedica ao auxílio administrativo de empresas de diversos portes e segmentos, 
-              utilizando técnicas contábeis e administrativas modernas para oferecer o melhor serviço aos nossos clientes.
-            </p>
-            <p className="text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              Nossa equipe técnica está em constante capacitação para oferecer soluções inovadoras na área contábil, 
-              garantindo tranquilidade e segurança para que você possa focar no crescimento do seu negócio.
-            </p>
-            
-            {/* Key Points */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                <div className="bg-corporate-blue/10 p-1 rounded-full mr-3 mt-1">
-                  <Check className="text-corporate-blue" size={16} />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Equipe Qualificada</h4>
-                  <p className="text-gray-600">Profissionais especializados e em constante atualização</p>
-                </div>
+            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 md:p-10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="flex items-center mb-8">
+                <Target className="text-primary mr-3" size={32} />
+                <h3 className="text-2xl font-heading font-bold text-masterplan-dark-gray">Nossos Valores</h3>
               </div>
               
-              <div className="flex items-start animate-fade-in" style={{ animationDelay: '0.5s' }}>
-                <div className="bg-corporate-blue/10 p-1 rounded-full mr-3 mt-1">
-                  <Check className="text-corporate-blue" size={16} />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Atendimento Personalizado</h4>
-                  <p className="text-gray-600">Cada cliente recebe atenção individualizada para suas necessidades</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                <div className="bg-corporate-blue/10 p-1 rounded-full mr-3 mt-1">
-                  <Check className="text-corporate-blue" size={16} />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Tecnologia Avançada</h4>
-                  <p className="text-gray-600">Utilizamos as mais modernas ferramentas do mercado</p>
-                </div>
+              <div className="space-y-6">
+                {values.map((value, index) => (
+                  <div 
+                    key={value.title} 
+                    className="flex items-start group animate-fade-in"
+                    style={{ animationDelay: `${0.5 + index * 0.1}s` }}
+                  >
+                    <div className="bg-white p-3 rounded-xl shadow-sm mr-4 group-hover:shadow-md transition-shadow duration-300">
+                      <value.icon className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-heading font-semibold text-masterplan-dark-gray mb-2 group-hover:text-primary transition-colors duration-300">
+                        {value.title}
+                      </h4>
+                      <p className="text-masterplan-gray leading-relaxed">
+                        {value.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            
-            <a 
-              href="#contact" 
-              className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium inline-flex animate-fade-in" 
-              style={{ animationDelay: '0.7s' }}
-            >
-              <span>Conheça Nossos Diferenciais</span>
-              <ArrowRight size={18} />
-            </a>
           </div>
+        </div>
+        
+        {/* Mission Statement */}
+        <div className="mt-16 bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-center text-white animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">
+            Nossa Missão
+          </h3>
+          <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto opacity-95">
+            "Simplificar a rotina financeira dos nossos clientes, garantindo controle, organização e informações confiáveis para decisões mais assertivas, sendo verdadeiros parceiros no crescimento sustentável de cada empresa."
+          </p>
         </div>
       </div>
     </section>
