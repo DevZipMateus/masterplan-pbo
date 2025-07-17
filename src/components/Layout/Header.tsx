@@ -42,7 +42,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
               alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" 
-              className="h-10 sm:h-12 md:h-14 w-auto"
+              className="h-16 sm:h-20 md:h-24 w-auto"
             />
           </Link>
           
