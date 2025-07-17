@@ -6,29 +6,29 @@ const EgestorERP = () => {
   const egestorLink = "https://www.egestor.com.br/afl/12256";
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-transparent overflow-hidden">
-      <div className="container px-4 sm:px-6 lg:px-8 mx-auto max-w-6xl">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-transparent overflow-hidden">
+      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 mx-auto max-w-6xl">
         {/* Two-column layout for desktop, stack on mobile */}
-        <div className="flex flex-col lg:flex-row lg:items-center gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-6 sm:gap-8 lg:gap-12 mb-6 sm:mb-8 lg:mb-10">
           {/* Left column - Header Text */}
-          <div className="lg:w-1/2 text-center lg:text-left mb-6 lg:mb-0 animate-fade-in">
+          <div className="lg:w-1/2 text-center lg:text-left mb-4 lg:mb-0 animate-fade-in">
             <a 
               href={egestorLink} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-block hover:opacity-90 transition-opacity"
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-2 sm:mb-3 md:mb-4 leading-tight px-2">
                 Sistema de gestão empresarial
               </h2>
             </a>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 font-normal max-w-lg mx-auto lg:mx-0">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 font-normal max-w-lg mx-auto lg:mx-0 px-2">
               Dobre seus lucros otimizando sua gestão
             </p>
           </div>
           
           {/* Right column - Video Container */}
-          <div className="lg:w-1/2 rounded-xl overflow-hidden shadow-xl animate-fade-in border border-white/20">
+          <div className="lg:w-1/2 rounded-xl overflow-hidden shadow-xl animate-fade-in border border-white/20 mx-2 lg:mx-0">
             <video 
               className="w-full aspect-video object-cover" 
               autoPlay 
@@ -44,14 +44,14 @@ const EgestorERP = () => {
         </div>
         
         {/* CTA Button - Centered below both columns */}
-        <div className="flex justify-center animate-fade-in">
+        <div className="flex justify-center animate-fade-in px-3">
           <a 
             href={egestorLink} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-block w-full max-w-xs sm:max-w-sm"
           >
-            <button className="w-full py-2.5 sm:py-3 bg-green-400 hover:bg-green-500 text-gray-800 font-medium rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02] border border-green-300 text-sm sm:text-base">
+            <button className="w-full py-2.5 sm:py-3 bg-green-400 hover:bg-green-500 text-gray-800 font-medium rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02] border border-green-300 text-sm sm:text-base min-h-[44px]">
               Teste grátis
             </button>
           </a>
