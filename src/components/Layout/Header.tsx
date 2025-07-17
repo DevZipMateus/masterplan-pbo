@@ -60,7 +60,7 @@ const Header = () => {
           {/* Social Media Icons */}
           <div className="flex space-x-4">
             <a 
-              href="https://www.linkedin.com/company/79718799/admin/dashboard/" 
+              href="https://www.linkedin.com/company/masterplan-bpo-financeiro" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-masterplan-gray hover:text-primary transition-colors duration-300"

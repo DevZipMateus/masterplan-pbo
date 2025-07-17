@@ -16,14 +16,14 @@ const Footer = () => {
                 className="h-12 w-auto mb-4 filter brightness-0 invert"
               />
               <p className="text-gray-300 leading-relaxed max-w-md">
-                Transformando a gestão financeira há mais de 15 anos. Somos especialistas em BPO Financeiro, 
-                oferecendo soluções completas para empresas de todos os portes.
+                Especialistas em BPO Financeiro, oferecendo soluções completas para 
+                otimizar a gestão financeira de empresas de todos os portes.
               </p>
             </div>
             
             <div className="flex space-x-4">
               <a 
-                href="https://www.linkedin.com/company/79718799/admin/dashboard/" 
+                href="https://www.linkedin.com/company/masterplan-bpo-financeiro" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-primary transition-colors duration-300 p-3 rounded-lg group"
@@ -69,7 +69,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start group">
                 <MapPin className="mr-3 mt-1 flex-shrink-0 text-primary group-hover:text-white transition-colors" size={18} />
-                <span>Rua Valdecir Rodrigues Romero, 399</span>
+                <span>
+                  Rua Valdecir Rodrigues Romero, 399<br />
+                  Ribeirão Preto, SP<br />
+                  CEP: 14056-520
+                </span>
               </li>
             </ul>
           </div>

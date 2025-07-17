@@ -118,7 +118,9 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-masterplan-dark-gray mb-1">Endereço</h4>
                     <p className="text-masterplan-gray">
-                      Rua Valdecir Rodrigues Romero, 399
+                      Rua Valdecir Rodrigues Romero, 399<br />
+                      Ribeirão Preto, SP<br />
+                      CEP: 14056-520
                     </p>
                   </div>
                 </div>
