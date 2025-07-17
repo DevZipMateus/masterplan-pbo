@@ -127,11 +127,11 @@
   
   /* Custom Masterplan styling */
   .btn-primary {
-    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm font-medium;
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm font-medium text-sm sm:text-base;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary border border-primary/20 px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm font-medium;
+    @apply bg-white hover:bg-gray-50 text-primary border border-primary/20 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm font-medium text-sm sm:text-base;
   }
   
   /* Card hover effects */
@@ -141,7 +141,7 @@
   
   /* Section styling */
   .section {
-    @apply py-16 md:py-20;
+    @apply py-12 sm:py-16 md:py-20;
   }
   
   /* Container max widths */
@@ -151,7 +151,7 @@
   
   /* Navigation link hover effect */
   .nav-link {
-    @apply relative py-2 px-4 text-gray-700 hover:text-primary transition-colors duration-300 font-medium after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative py-2 px-3 sm:px-4 text-gray-700 hover:text-primary transition-colors duration-300 font-medium after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
   }
   
   /* Floating animation */
@@ -191,5 +191,20 @@
   .focus-visible\:outline-2:focus-visible {
     outline: 2px solid hsl(var(--primary));
     outline-offset: 2px;
+  }
+
+  /* Responsive text handling */
+  @media (max-width: 640px) {
+    .text-responsive {
+      font-size: clamp(0.875rem, 4vw, 1rem);
+    }
+  }
+  
+  /* Improved mobile touch targets */
+  @media (max-width: 768px) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
   }
 }
