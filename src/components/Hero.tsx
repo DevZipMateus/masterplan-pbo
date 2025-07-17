@@ -17,7 +17,7 @@ const Hero = () => {
       ></div>
       
       {/* Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-masterplan-teal/80"></div>
+      <div className="absolute inset-0 bg-masterplan-teal/40"></div>
       
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
