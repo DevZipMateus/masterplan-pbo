@@ -1,13 +1,17 @@
+
 import React from 'react';
 import { ArrowRight, CheckCircle, Instagram, Users, Heart, MessageCircle } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
+
 const Hero = () => {
   const isMobile = useIsMobile();
-  return <section className="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden">
+
+  return (
+    <section className="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: 'url(/lovable-uploads/1aef00f8-553e-484f-bb1f-71204338dc8d.png)'
-    }}></div>
+        backgroundImage: 'url(/lovable-uploads/1aef00f8-553e-484f-bb1f-71204338dc8d.png)'
+      }}></div>
       
       {/* Overlay to ensure text readability */}
       <div className="absolute inset-0 bg-masterplan-teal/40"></div>
@@ -16,8 +20,8 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{
-        animationDelay: '2s'
-      }}></div>
+          animationDelay: '2s'
+        }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-white/5 to-transparent rounded-full"></div>
       </div>
       
@@ -30,23 +34,23 @@ const Hero = () => {
             </div>
             
             <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-heading font-bold text-black leading-tight mb-6 animate-fade-in`} style={{
-            animationDelay: '0.1s'
-          }}>
+              animationDelay: '0.1s'
+            }}>
               Transforme a gestão financeira da sua{' '}
               <span className="text-[#0707f5]">empresa</span>
             </h1>
             
             <p className="text-lg md:text-xl text-black/80 mb-8 animate-fade-in" style={{
-            animationDelay: '0.2s'
-          }}>
+              animationDelay: '0.2s'
+            }}>
               Soluções eficientes para gestão financeira com tecnologia, experiência e 
               comprometimento total com o seu sucesso.
             </p>
             
             {/* Key Benefits */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in" style={{
-            animationDelay: '0.3s'
-          }}>
+              animationDelay: '0.3s'
+            }}>
               <div className="flex items-center text-black/80">
                 <CheckCircle className="text-accent mr-2 flex-shrink-0" size={20} />
                 <span>Transparência total</span>
@@ -63,13 +67,25 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{
-            animationDelay: '0.4s'
-          }}>
-              <a href="https://wa.me/5516997882208" target="_blank" rel="noopener noreferrer" className="bg-white hover:bg-white/90 text-masterplan-teal px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white/50 shadow-sm font-medium inline-flex items-center justify-center group" aria-label="Entrar em contato via WhatsApp">
+              animationDelay: '0.4s'
+            }}>
+              <a 
+                href="https://wa.me/5516997882208" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-white hover:bg-white/90 text-masterplan-teal px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white/50 shadow-sm font-medium inline-flex items-center justify-center group" 
+                aria-label="Entrar em contato via WhatsApp"
+              >
                 <span>Fale conosco agora</span>
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </a>
-              <a href="#servicos" className="bg-transparent hover:bg-white/10 text-black border border-black/30 px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-black/50 shadow-sm font-medium inline-flex items-center justify-center" aria-label="Conhecer nossos serviços">
+              <a 
+                href="https://wa.me/5516997882208" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-transparent hover:bg-white/10 text-black border border-black/30 px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-black/50 shadow-sm font-medium inline-flex items-center justify-center" 
+                aria-label="Conhecer nossos serviços via WhatsApp"
+              >
                 Nossos serviços
               </a>
             </div>
@@ -77,8 +93,8 @@ const Hero = () => {
           
           {/* Right Column - Instagram Section */}
           <div className="lg:w-1/2 animate-fade-in" style={{
-          animationDelay: '0.5s'
-        }}>
+            animationDelay: '0.5s'
+          }}>
             <div className="relative">
               {/* Instagram showcase */}
               <div className="bg-gradient-to-br from-white/20 to-accent/20 rounded-2xl p-8 md:p-12 shadow-lg">
@@ -119,8 +135,8 @@ const Hero = () => {
               
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4 animate-float" style={{
-              animationDelay: '1s'
-            }}>
+                animationDelay: '1s'
+              }}>
                 <div className="flex items-center">
                   <Instagram className="text-pink-500 mr-2" size={16} />
                   <span className="text-sm font-medium text-masterplan-gray">Siga-nos</span>
@@ -139,6 +155,8 @@ const Hero = () => {
           </path>
         </svg>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
