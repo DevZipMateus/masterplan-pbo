@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
@@ -11,7 +12,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/lovable-uploads/037c38e1-7d50-45b3-a818-08e34c2f6f52.png)'
+          backgroundImage: 'url(/lovable-uploads/1aef00f8-553e-484f-bb1f-71204338dc8d.png)'
         }}
       ></div>
       
