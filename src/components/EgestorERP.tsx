@@ -7,7 +7,7 @@ const EgestorERP = () => {
   const egestorLink = "https://www.egestor.com.br/afl/12256";
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-16 bg-transparent overflow-hidden">
       <div className="container px-4 mx-auto max-w-6xl">
         {/* Two-column layout for desktop, stack on mobile */}
         <div className="flex flex-col md:flex-row md:items-center md:gap-8 lg:gap-12 mb-10">

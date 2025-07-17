@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
@@ -54,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contato" className="section bg-gray-50">
+    <section id="contato" className="section bg-transparent">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -141,7 +140,7 @@ const Contact = () => {
             </div>
             
             {/* Quick Contact */}
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <h4 className="font-heading font-semibold text-masterplan-dark-gray mb-4">Contato Rápido</h4>
               <p className="text-masterplan-gray mb-4">
                 Prefere falar diretamente conosco? Entre em contato via WhatsApp para atendimento imediato.
@@ -163,10 +162,11 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-heading font-bold text-masterplan-dark-gray mb-6">
                 Envie sua Mensagem
               </h3>
+              
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

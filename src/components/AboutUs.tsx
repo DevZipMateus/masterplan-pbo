@@ -32,7 +32,7 @@ const values = [
 
 const AboutUs = () => {
   return (
-    <section id="sobre" className="section bg-white">
+    <section id="sobre" className="section bg-transparent">
       <div className="container-custom">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Left Column - Content */}
@@ -79,7 +79,7 @@ const AboutUs = () => {
           
           {/* Right Column - Values */}
           <div className="lg:w-1/2">
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 md:p-10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <div className="flex items-center mb-8">
                 <Target className="text-primary mr-3" size={32} />
                 <h3 className="text-2xl font-heading font-bold text-masterplan-dark-gray">Nossos Valores</h3>
@@ -111,7 +111,7 @@ const AboutUs = () => {
         </div>
         
         {/* Mission Statement */}
-        <div className="mt-16 bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-center text-white animate-fade-in" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-16 bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-center text-white shadow-lg animate-fade-in" style={{ animationDelay: '0.8s' }}>
           <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">
             Nossa Missão
           </h3>
