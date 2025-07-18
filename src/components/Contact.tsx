@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, Clock, Send, CheckCircle } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
@@ -26,15 +25,43 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
+      // Format the message for WhatsApp
+      let whatsappMessage = `*Nova mensagem do site:*\n\n`;
+      whatsappMessage += `*Nome:* ${formData.name}\n`;
+      whatsappMessage += `*E-mail:* ${formData.email}\n`;
+      
+      if (formData.phone) {
+        whatsappMessage += `*Telefone:* ${formData.phone}\n`;
+      }
+      
+      if (formData.company) {
+        whatsappMessage += `*Empresa:* ${formData.company}\n`;
+      }
+      
+      whatsappMessage += `\n*Mensagem:*\n${formData.message}`;
+
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      
+      // WhatsApp number (using the company's number)
+      const whatsappNumber = '5516997882208';
+      
+      // Create WhatsApp URL
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      
+      // Simulate processing delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       
+      // Open WhatsApp with the formatted message
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      
       toast({
-        title: "Mensagem enviada com sucesso!",
-        description: "Entraremos em contato em breve.",
+        title: "Redirecionando para WhatsApp!",
+        description: "Sua mensagem foi formatada e será enviada via WhatsApp.",
       });
       
+      // Clear form after successful submission
       setFormData({
         name: '',
         email: '',
@@ -44,8 +71,8 @@ const Contact = () => {
       });
     } catch (error) {
       toast({
-        title: "Erro ao enviar mensagem",
-        description: "Tente novamente ou entre em contato via WhatsApp.",
+        title: "Erro ao processar mensagem",
+        description: "Tente novamente ou entre em contato diretamente via WhatsApp.",
         variant: "destructive",
       });
     } finally {
@@ -245,12 +272,12 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Enviando...
+                      Enviando para WhatsApp...
                     </>
                   ) : (
                     <>
                       <Send className="mr-2 group-hover:translate-x-1 transition-transform flex-shrink-0" size={18} />
-                      <span>Enviar Mensagem</span>
+                      <span>Enviar via WhatsApp</span>
                     </>
                   )}
                 </button>
