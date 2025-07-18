@@ -23,7 +23,7 @@ const Footer = () => {
             
             <div className="flex space-x-4">
               <a 
-                href="https://www.linkedin.com/company/masterplan-bpo-financeiro" 
+                href="https://www.linkedin.com/company/masterplanbpofinanceiro/?viewAsMember=true" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-primary transition-colors duration-300 p-3 rounded-lg group"
