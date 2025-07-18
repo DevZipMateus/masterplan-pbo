@@ -1,14 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Mail, Phone } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
-
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -17,23 +14,18 @@ const Header = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   const handleNavClick = () => {
     setIsMobileMenuOpen(false);
   };
-
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
       {/* Contact Info Bar - Hidden on mobile */}
       <div className="bg-masterplan-teal text-white py-1.5 px-3 hidden sm:block">
         <div className="container mx-auto max-w-7xl flex justify-center sm:justify-between items-center gap-4 text-xs sm:text-sm">
@@ -57,11 +49,7 @@ const Header = () => {
           <div className="flex justify-between items-center h-24">
             {/* Logo */}
             <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02]" aria-label="Ir para página inicial">
-              <img 
-                src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
-                alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" 
-                className="w-auto h-24 transition-all duration-300"
-              />
+              <img src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" className="w-58 h-64 transition-all duration-300" />
             </Link>
             
             {/* Desktop Navigation */}
@@ -73,12 +61,7 @@ const Header = () => {
             </nav>
             
             {/* Mobile Menu Button */}
-            <button 
-              className="md:hidden text-masterplan-gray hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-md p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
-              onClick={toggleMobileMenu}
-              aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
-              aria-expanded={isMobileMenuOpen}
-            >
+            <button className="md:hidden text-masterplan-gray hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-md p-2 min-h-[44px] min-w-[44px] flex items-center justify-center" onClick={toggleMobileMenu} aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={isMobileMenuOpen}>
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -94,8 +77,6 @@ const Header = () => {
           </nav>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
