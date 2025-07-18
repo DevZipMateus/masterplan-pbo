@@ -54,7 +54,7 @@
       teal: 187 85% 43%;
       blue: 212 85% 55%;
       light-blue: 200 80% 75%;
-      gray: 210 20% 45%;
+      gray: 0 0% 45%; /* Updated to match #727272 */
       dark-gray: 210 40% 8%;
       white: 0 0% 100%;
     }

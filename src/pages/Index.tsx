@@ -16,15 +16,15 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#727272' }}>
       <div className="relative z-10">
         <Header />
         
         <main className="flex-grow">
           <Hero />
           
-          {/* Sections with gray background and turquoise details */}
-          <div className="bg-gray-100">
+          {/* Sections with the new gray background */}
+          <div style={{ backgroundColor: '#727272' }}>
             <Services />
             <AboutUs />
             <EgestorERP />

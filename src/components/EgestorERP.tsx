@@ -6,7 +6,7 @@ const EgestorERP = () => {
   const egestorLink = "https://www.egestor.com.br/afl/12256";
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-200 overflow-hidden">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden" style={{ backgroundColor: '#727272' }}>
       <div className="container px-4 sm:px-6 md:px-8 mx-auto max-w-6xl">
         {/* Two-column layout for desktop, stack on mobile */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
@@ -18,11 +18,11 @@ const EgestorERP = () => {
               rel="noopener noreferrer" 
               className="inline-block hover:opacity-90 transition-opacity"
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
                 Sistema de gestão empresarial
               </h2>
             </a>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-cyan-600 font-semibold max-w-lg mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-cyan-400 font-semibold max-w-lg mx-auto lg:mx-0">
               Dobre seus lucros otimizando sua gestão
             </p>
           </div>

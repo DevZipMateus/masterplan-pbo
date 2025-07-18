@@ -67,7 +67,7 @@ export default {
 					teal: 'hsl(187 85% 43%)',
 					blue: 'hsl(212 85% 55%)',
 					'light-blue': 'hsl(200 80% 75%)',
-					gray: 'hsl(210 20% 45%)',
+					gray: 'hsl(0 0% 45%)', // Updated to match #727272
 					'dark-gray': 'hsl(210 40% 8%)',
 					white: 'hsl(0 0% 100%)',
 				}
