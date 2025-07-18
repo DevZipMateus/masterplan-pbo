@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail, Linkedin, Instagram, ExternalLink } from 'lucide-react';
 
@@ -13,7 +12,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
                 alt="Masterplan BPO Financeiro" 
-                className="h-12 w-auto mb-4 filter brightness-0 invert"
+                className="h-24 w-auto mb-4"
               />
               <p className="text-gray-300 leading-relaxed max-w-md">
                 Especialistas em BPO Financeiro, oferecendo soluções completas para 
