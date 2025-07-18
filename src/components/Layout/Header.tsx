@@ -38,9 +38,9 @@ const Header = () => {
       <div className="bg-masterplan-teal text-white py-1.5 px-3 hidden sm:block">
         <div className="container mx-auto max-w-7xl flex justify-center sm:justify-between items-center gap-4 text-xs sm:text-sm">
           <div className="flex items-center gap-4">
-            <a href="mailto:contato@masterplanbpo.com.br" className="flex items-center gap-2 hover:text-masterplan-light-blue transition-colors">
+            <a href="mailto:matheus@masterplanbpo.com.br" className="flex items-center gap-2 hover:text-masterplan-light-blue transition-colors">
               <Mail size={14} />
-              <span className="hidden md:inline">contato@masterplanbpo.com.br</span>
+              <span className="hidden md:inline">matheus@masterplanbpo.com.br</span>
             </a>
             <a href="tel:+5516997882208" className="flex items-center gap-2 hover:text-masterplan-light-blue transition-colors">
               <Phone size={14} />
