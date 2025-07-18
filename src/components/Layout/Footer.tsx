@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Linkedin, Instagram, ExternalLink } from 'lucide-react';
+import { Phone, Mail, Linkedin, Instagram, ExternalLink } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -66,14 +66,6 @@ const Footer = () => {
                 >
                   matheus@masterplanbpo.com.br
                 </a>
-              </li>
-              <li className="flex items-start group">
-                <MapPin className="mr-3 mt-1 flex-shrink-0 text-primary group-hover:text-white transition-colors" size={18} />
-                <span>
-                  Rua Valdecir Rodrigues Romero, 399<br />
-                  Ribeirão Preto, SP<br />
-                  CEP: 14056-520
-                </span>
               </li>
             </ul>
           </div>

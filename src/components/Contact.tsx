@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, Clock, Send, CheckCircle } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 
 const Contact = () => {
@@ -108,20 +108,6 @@ const Contact = () => {
                     >
                       matheus@masterplanbpo.com.br
                     </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start group">
-                  <div className="bg-white/20 p-3 rounded-xl mr-3 sm:mr-4 group-hover:bg-white/30 transition-colors duration-300 border border-white/30 flex-shrink-0">
-                    <MapPin className="text-white" size={20} />
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="font-semibold text-white mb-1 text-sm sm:text-base">Endereço</h4>
-                    <p className="text-white/80 text-sm sm:text-base">
-                      Rua Valdecir Rodrigues Romero, 399<br />
-                      Ribeirão Preto, SP<br />
-                      CEP: 14056-520
-                    </p>
                   </div>
                 </div>
                 
