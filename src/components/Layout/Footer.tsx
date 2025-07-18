@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone, Mail, Linkedin, Instagram, ExternalLink } from 'lucide-react';
 
@@ -58,13 +59,15 @@ const Footer = () => {
               </li>
               <li className="flex items-start group">
                 <Mail className="mr-3 mt-1 flex-shrink-0 text-primary group-hover:text-white transition-colors" size={18} />
-                <a 
-                  href="mailto:matheus@masterplanbpo.com.br" 
-                  className="hover:text-primary transition-colors break-all"
-                  aria-label="Enviar email para matheus@masterplanbpo.com.br"
-                >
-                  matheus@masterplanbpo.com.br
-                </a>
+                <div className="min-w-0 flex-1">
+                  <a 
+                    href="mailto:matheus@masterplanbpo.com.br" 
+                    className="hover:text-primary transition-colors text-sm leading-relaxed block"
+                    aria-label="Enviar email para matheus@masterplanbpo.com.br"
+                  >
+                    matheus@masterplanbpo.com.br
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
