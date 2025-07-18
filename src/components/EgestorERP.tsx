@@ -6,7 +6,7 @@ const EgestorERP = () => {
   const egestorLink = "https://www.egestor.com.br/afl/12256";
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-transparent overflow-hidden">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-200 overflow-hidden">
       <div className="container px-4 sm:px-6 md:px-8 mx-auto max-w-6xl">
         {/* Two-column layout for desktop, stack on mobile */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
@@ -18,17 +18,17 @@ const EgestorERP = () => {
               rel="noopener noreferrer" 
               className="inline-block hover:opacity-90 transition-opacity"
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 leading-tight">
                 Sistema de gestão empresarial
               </h2>
             </a>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 font-normal max-w-lg mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-cyan-600 font-semibold max-w-lg mx-auto lg:mx-0">
               Dobre seus lucros otimizando sua gestão
             </p>
           </div>
           
           {/* Right column - Video Container */}
-          <div className="lg:w-1/2 rounded-xl overflow-hidden shadow-xl animate-fade-in border border-white/20">
+          <div className="lg:w-1/2 rounded-xl overflow-hidden shadow-xl animate-fade-in border border-cyan-200">
             <video 
               className="w-full aspect-video object-cover" 
               autoPlay 
@@ -51,7 +51,7 @@ const EgestorERP = () => {
             rel="noopener noreferrer" 
             className="inline-block w-full max-w-xs sm:max-w-sm"
           >
-            <button className="w-full py-3 sm:py-4 bg-green-400 hover:bg-green-500 text-gray-800 font-medium rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02] border border-green-300 text-base sm:text-lg min-h-[48px]">
+            <button className="w-full py-3 sm:py-4 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02] border border-cyan-400 text-base sm:text-lg min-h-[48px]">
               Teste grátis
             </button>
           </a>

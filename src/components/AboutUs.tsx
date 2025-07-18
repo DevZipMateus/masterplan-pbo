@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CheckCircle, Target, Heart, Shield, Lightbulb, Award } from 'lucide-react';
 
@@ -36,22 +37,22 @@ const AboutUs = () => {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Left Column - Content */}
           <div className="lg:w-1/2">
-            <div className="inline-block bg-white/20 text-white font-medium px-4 py-2 rounded-full text-sm mb-6 animate-fade-in">
+            <div className="inline-block bg-cyan-500 text-white font-medium px-4 py-2 rounded-full text-sm mb-6 animate-fade-in">
               Sobre a Masterplan
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-gray-800 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               Transformando a gestão financeira há{' '}
-              <span className="text-blue-200">mais de 15 anos</span>
+              <span className="text-cyan-600">mais de 15 anos</span>
             </h2>
             
-            <div className="space-y-6 text-lg text-white/90 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <p>
-                A <strong className="text-white">Masterplan BPO Financeiro</strong> nasceu com o propósito de transformar a forma como empresas lidam com sua gestão financeira. Com uma equipe formada por profissionais com mais de 15 anos de experiência no mercado financeiro, unimos conhecimento técnico, visão estratégica e tecnologia para oferecer soluções completas.
+                A <strong className="text-gray-800">Masterplan BPO Financeiro</strong> nasceu com o propósito de transformar a forma como empresas lidam com sua gestão financeira. Com uma equipe formada por profissionais com mais de 15 anos de experiência no mercado financeiro, unimos conhecimento técnico, visão estratégica e tecnologia para oferecer soluções completas.
               </p>
               
               <p>
-                Nossa <strong className="text-blue-200">missão</strong> é simplificar a rotina financeira dos nossos clientes, garantindo controle, organização e informações confiáveis para decisões mais assertivas.
+                Nossa <strong className="text-cyan-600">missão</strong> é simplificar a rotina financeira dos nossos clientes, garantindo controle, organização e informações confiáveis para decisões mais assertivas.
               </p>
               
               <p>
@@ -62,15 +63,15 @@ const AboutUs = () => {
             {/* Key Achievements */}
             <div className="flex justify-center mt-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">100%</div>
-                <div className="text-sm text-white/80">Satisfação dos Clientes</div>
+                <div className="text-3xl font-bold text-cyan-600 mb-2">100%</div>
+                <div className="text-sm text-gray-600">Satisfação dos Clientes</div>
               </div>
             </div>
           </div>
           
           {/* Right Column - Values */}
           <div className="lg:w-1/2">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg animate-fade-in border border-white/20" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg animate-fade-in border border-gray-200" style={{ animationDelay: '0.4s' }}>
               <div className="flex items-center mb-8">
                 <Target className="text-cyan-600 mr-3" size={32} />
                 <h3 className="text-2xl font-heading font-bold text-gray-800">Nossos Valores</h3>
@@ -83,7 +84,7 @@ const AboutUs = () => {
                     className="flex items-start group animate-fade-in"
                     style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                   >
-                    <div className="bg-white p-3 rounded-xl shadow-sm mr-4 group-hover:shadow-md transition-shadow duration-300 border border-cyan-100">
+                    <div className="bg-cyan-50 p-3 rounded-xl shadow-sm mr-4 group-hover:shadow-md transition-shadow duration-300 border border-cyan-100">
                       <value.icon className="text-cyan-600" size={24} />
                     </div>
                     <div>
@@ -102,7 +103,7 @@ const AboutUs = () => {
         </div>
         
         {/* Mission Statement */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white shadow-lg animate-fade-in border border-blue-400/30" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-2xl p-8 md:p-12 text-center text-white shadow-lg animate-fade-in border border-cyan-400/30" style={{ animationDelay: '0.8s' }}>
           <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">
             Nossa Missão
           </h3>

@@ -16,15 +16,15 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-100">
       <div className="relative z-10">
         <Header />
         
         <main className="flex-grow">
           <Hero />
           
-          {/* Sections with turquoise background */}
-          <div className="bg-cyan-500">
+          {/* Sections with gray background and turquoise details */}
+          <div className="bg-gray-100">
             <Services />
             <AboutUs />
             <EgestorERP />
