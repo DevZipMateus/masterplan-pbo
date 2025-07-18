@@ -51,7 +51,7 @@ const Header = () => {
       </div>
 
       {/* Main Header Content */}
-      <div className={`transition-all duration-300 ${isScrolled ? 'py-1 sm:py-2' : 'py-2 sm:py-3'}`}>
+      <div className={`transition-all duration-300 ${isScrolled ? 'py-2 sm:py-3' : 'py-3 sm:py-4'}`}>
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl">
           {/* Main Navigation */}
           <div className="flex justify-between items-center">
@@ -60,7 +60,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
                 alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" 
-                className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto"
+                className="h-18 sm:h-24 md:h-28 lg:h-32 w-auto"
               />
             </Link>
             
