@@ -32,6 +32,11 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    handleNavClick(); // Close mobile menu if open
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
       {/* Contact Info Bar - Hidden on small screens */}
@@ -76,13 +81,13 @@ const Header = () => {
           {/* Main Navigation */}
           <div className="flex justify-between items-center h-16 sm:h-20 lg:h-24">
             {/* Logo - Responsive sizing */}
-            <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02] flex-shrink-0" aria-label="Ir para página inicial">
+            <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02] flex-shrink-0" aria-label="Ir para página inicial" onClick={handleScrollToTop}>
               <img src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" className="h-52 sm:h-54 lg:h-54 w- 58 transition-all duration-300" />
             </Link>
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex space-x-6 xl:space-x-8" role="navigation" aria-label="Menu principal">
-              <Link to="/" className="nav-link text-base xl:text-lg">Início</Link>
+              <button onClick={handleScrollToTop} className="nav-link text-base xl:text-lg">Início</button>
               <a href="#sobre" className="nav-link text-base xl:text-lg">Sobre</a>
               <a href="#servicos" className="nav-link text-base xl:text-lg">Serviços</a>
               <a href="#contato" className="nav-link text-base xl:text-lg">Contato</a>
@@ -98,9 +103,9 @@ const Header = () => {
         {/* Mobile Navigation Menu */}
         <div className={`lg:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}>
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-1 border-t mt-2" role="navigation" aria-label="Menu mobile">
-            <Link to="/" className="px-4 py-3 text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center" onClick={handleNavClick}>
+            <button onClick={handleScrollToTop} className="px-4 py-3 text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center text-left">
               Início
-            </Link>
+            </button>
             <a href="#sobre" className="px-4 py-3 text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center" onClick={handleNavClick}>
               Sobre
             </a>
