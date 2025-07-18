@@ -51,20 +51,16 @@ const Header = () => {
       </div>
 
       {/* Main Header Content */}
-      <div className={`transition-all duration-300 ${isScrolled ? 'py-1.5 sm:py-2' : 'py-2 sm:py-3'}`}>
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl">
+      <div className="px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
           {/* Main Navigation */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center h-24">
             {/* Logo */}
             <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02]" aria-label="Ir para página inicial">
               <img 
                 src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
                 alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" 
-                className={`w-auto transition-all duration-300 ${
-                  isScrolled 
-                    ? 'h-12 sm:h-16 md:h-18 lg:h-20' 
-                    : 'h-14 sm:h-18 md:h-20 lg:h-24'
-                }`}
+                className="w-auto h-24 transition-all duration-300"
               />
             </Link>
             
