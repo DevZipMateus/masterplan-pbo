@@ -49,7 +49,7 @@ const Header = () => {
           <div className="flex justify-between items-center h-16 sm:h-20 lg:h-24">
             {/* Logo - Responsive sizing */}
             <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02] flex-shrink-0" aria-label="Ir para página inicial">
-              <img src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" className="h-52 sm:h-64 lg:h-20 w- 58 transition-all duration-300" />
+              <img src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" className="h-52 sm:h-54 lg:h-54 w- 58 transition-all duration-300" />
             </Link>
             
             {/* Desktop Navigation */}
