@@ -13,8 +13,8 @@ const Hero = () => {
         backgroundImage: 'url(/lovable-uploads/1aef00f8-553e-484f-bb1f-71204338dc8d.png)'
       }} />
       
-      {/* Reduced overlay opacity for better text readability */}
-      <div className="absolute inset-0 bg-masterplan-teal/20" />
+      {/* Increased overlay opacity for better text readability */}
+      <div className="absolute inset-0 bg-black/50" />
       
       {/* Background decorative elements with reduced opacity */}
       <div className="absolute inset-0 overflow-hidden">
@@ -29,23 +29,23 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center">
           {/* Content - Now fully centered */}
           <div className="w-full max-w-4xl">
-            <div className="inline-block bg-white/30 text-gray-900 font-medium px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm mb-3 sm:mb-4 md:mb-6 animate-fade-in shadow-sm">
+            <div className="inline-block bg-white/90 text-gray-900 font-medium px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm mb-3 sm:mb-4 md:mb-6 animate-fade-in shadow-md">
               Mais de 15 anos de experiência
             </div>
             
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-heading font-bold text-gray-900 leading-tight mb-3 sm:mb-4 md:mb-6 animate-fade-in px-2 drop-shadow-sm" style={{
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-heading font-bold text-white leading-tight mb-3 sm:mb-4 md:mb-6 animate-fade-in px-2" style={{
               animationDelay: '0.1s',
-              textShadow: '0 1px 2px rgba(255, 255, 255, 0.8)'
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)'
             }}>
               Transforme a gestão financeira da sua{' '}
-              <span className="text-[#0707f5] drop-shadow-sm" style={{
-                textShadow: '0 1px 2px rgba(255, 255, 255, 0.8)'
+              <span className="text-accent" style={{
+                textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)'
               }}>empresa</span>
             </h1>
             
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-6 md:mb-8 animate-fade-in text-gray-800 max-w-2xl mx-auto px-2 drop-shadow-sm" style={{
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-6 md:mb-8 animate-fade-in text-white/95 max-w-2xl mx-auto px-2" style={{
               animationDelay: '0.2s',
-              textShadow: '0 1px 2px rgba(255, 255, 255, 0.7)'
+              textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)'
             }}>
               Soluções eficientes para gestão financeira com tecnologia, experiência e 
               comprometimento total com o seu sucesso.
@@ -55,22 +55,28 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6 md:mb-8 animate-fade-in justify-center px-2" style={{
               animationDelay: '0.3s'
             }}>
-              <div className="flex items-center text-gray-800 justify-center drop-shadow-sm" style={{
-                textShadow: '0 1px 2px rgba(255, 255, 255, 0.7)'
+              <div className="flex items-center text-white justify-center" style={{
+                textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)'
               }}>
-                <CheckCircle className="text-accent mr-2 flex-shrink-0 drop-shadow-sm" size={16} />
+                <CheckCircle className="text-accent mr-2 flex-shrink-0" size={16} style={{
+                  filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5))'
+                }} />
                 <span className="text-xs sm:text-sm md:text-base font-medium">Transparência total</span>
               </div>
-              <div className="flex items-center text-gray-800 justify-center drop-shadow-sm" style={{
-                textShadow: '0 1px 2px rgba(255, 255, 255, 0.7)'
+              <div className="flex items-center text-white justify-center" style={{
+                textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)'
               }}>
-                <CheckCircle className="text-accent mr-2 flex-shrink-0 drop-shadow-sm" size={16} />
+                <CheckCircle className="text-accent mr-2 flex-shrink-0" size={16} style={{
+                  filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5))'
+                }} />
                 <span className="text-xs sm:text-sm md:text-base font-medium">Tecnologia avançada</span>
               </div>
-              <div className="flex items-center text-gray-800 justify-center drop-shadow-sm" style={{
-                textShadow: '0 1px 2px rgba(255, 255, 255, 0.7)'
+              <div className="flex items-center text-white justify-center" style={{
+                textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)'
               }}>
-                <CheckCircle className="text-accent mr-2 flex-shrink-0 drop-shadow-sm" size={16} />
+                <CheckCircle className="text-accent mr-2 flex-shrink-0" size={16} style={{
+                  filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5))'
+                }} />
                 <span className="text-xs sm:text-sm md:text-base font-medium">Suporte dedicado</span>
               </div>
             </div>
@@ -79,12 +85,12 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in max-w-sm sm:max-w-md mx-auto justify-center px-2" style={{
               animationDelay: '0.4s'
             }}>
-              <a href="https://wa.me/5516997882208" target="_blank" rel="noopener noreferrer" className="bg-white hover:bg-white/95 text-masterplan-teal px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white/50 shadow-md font-medium inline-flex items-center justify-center group text-sm sm:text-base min-h-[44px]" aria-label="Entrar em contato via WhatsApp">
+              <a href="https://wa.me/5516997882208" target="_blank" rel="noopener noreferrer" className="bg-white hover:bg-white/95 text-masterplan-teal px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg font-medium inline-flex items-center justify-center group text-sm sm:text-base min-h-[44px]" aria-label="Entrar em contato via WhatsApp">
                 <span>Fale conosco agora</span>
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
               </a>
-              <a href="https://wa.me/5516997882208" target="_blank" rel="noopener noreferrer" className="bg-white/20 hover:bg-white/30 text-gray-900 border border-white/40 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white/50 shadow-md font-medium inline-flex items-center justify-center text-sm sm:text-base min-h-[44px] backdrop-blur-sm" aria-label="Conhecer nossos serviços via WhatsApp" style={{
-                textShadow: '0 1px 2px rgba(255, 255, 255, 0.7)'
+              <a href="https://wa.me/5516997882208" target="_blank" rel="noopener noreferrer" className="bg-white/20 hover:bg-white/30 text-white border border-white/40 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg font-medium inline-flex items-center justify-center text-sm sm:text-base min-h-[44px] backdrop-blur-sm" aria-label="Conhecer nossos serviços via WhatsApp" style={{
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)'
               }}>
                 Nossos serviços
               </a>
