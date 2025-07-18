@@ -1,11 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Mail, Phone } from 'lucide-react';
+import { Menu, X, Mail, Phone, Linkedin, Instagram } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -14,18 +17,23 @@ const Header = () => {
         setIsScrolled(false);
       }
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
   const handleNavClick = () => {
     setIsMobileMenuOpen(false);
   };
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
       {/* Contact Info Bar - Hidden on small screens */}
       <div className="bg-masterplan-teal text-white py-2 px-4 hidden lg:block">
         <div className="container mx-auto max-w-7xl flex justify-between items-center text-sm">
@@ -37,6 +45,26 @@ const Header = () => {
             <a href="tel:+5516997882208" className="flex items-center gap-2 hover:text-masterplan-light-blue transition-colors">
               <Phone size={16} />
               <span>(16) 99788-2208</span>
+            </a>
+          </div>
+          <div className="flex items-center gap-4">
+            <a 
+              href="https://www.linkedin.com/company/masterplanbpofinanceiro/?viewAsMember=true" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-masterplan-light-blue transition-colors p-1"
+              aria-label="Acesse nosso LinkedIn"
+            >
+              <Linkedin size={16} />
+            </a>
+            <a 
+              href="https://www.instagram.com/masterplanbpofinanceiro/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-masterplan-light-blue transition-colors p-1"
+              aria-label="Acesse nosso Instagram"
+            >
+              <Instagram size={16} />
             </a>
           </div>
         </div>
@@ -85,6 +113,8 @@ const Header = () => {
           </nav>
         </div>
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default Header;
