@@ -34,24 +34,24 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
-      {/* Contact Info Bar */}
-      <div className="bg-masterplan-teal text-white py-2 px-3 sm:px-4">
-        <div className="container mx-auto max-w-7xl flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-2 sm:gap-4 text-xs sm:text-sm">
+      {/* Contact Info Bar - Hidden on mobile */}
+      <div className="bg-masterplan-teal text-white py-1.5 px-3 hidden sm:block">
+        <div className="container mx-auto max-w-7xl flex justify-center sm:justify-between items-center gap-4 text-xs sm:text-sm">
           <div className="flex items-center gap-4">
             <a href="mailto:contato@masterplanbpo.com.br" className="flex items-center gap-2 hover:text-masterplan-light-blue transition-colors">
               <Mail size={14} />
-              <span>contato@masterplanbpo.com.br</span>
+              <span className="hidden md:inline">contato@masterplanbpo.com.br</span>
             </a>
-            <a href="tel:+5511999999999" className="flex items-center gap-2 hover:text-masterplan-light-blue transition-colors">
+            <a href="tel:+5516997882208" className="flex items-center gap-2 hover:text-masterplan-light-blue transition-colors">
               <Phone size={14} />
-              <span>(11) 99999-9999</span>
+              <span>(16) 99788-2208</span>
             </a>
           </div>
         </div>
       </div>
 
       {/* Main Header Content */}
-      <div className={`transition-all duration-300 ${isScrolled ? 'py-2 sm:py-3' : 'py-3 sm:py-4'}`}>
+      <div className={`transition-all duration-300 ${isScrolled ? 'py-1.5 sm:py-2' : 'py-2 sm:py-3'}`}>
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl">
           {/* Main Navigation */}
           <div className="flex justify-between items-center">
@@ -60,7 +60,11 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
                 alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" 
-                className="h-18 sm:h-24 md:h-28 lg:h-32 w-auto"
+                className={`w-auto transition-all duration-300 ${
+                  isScrolled 
+                    ? 'h-12 sm:h-16 md:h-18 lg:h-20' 
+                    : 'h-14 sm:h-18 md:h-20 lg:h-24'
+                }`}
               />
             </Link>
             
