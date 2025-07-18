@@ -89,7 +89,7 @@ const Hero = () => {
                 <span>Fale conosco agora</span>
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </a>
-              <a href="https://wa.me/5516997882208" target="_blank" rel="noopener noreferrer" className="bg-white/20 hover:bg-white/30 text-white border border-white/40 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg font-medium inline-flex items-center justify-center text-base sm:text-lg min-h-[48px] backdrop-blur-sm" aria-label="Conhecer nossos serviços via WhatsApp" style={{
+              <a href="#servicos" className="bg-white/20 hover:bg-white/30 text-white border border-white/40 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg font-medium inline-flex items-center justify-center text-base sm:text-lg min-h-[48px] backdrop-blur-sm" aria-label="Ver nossos serviços" style={{
                 textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)'
               }}>
                 Nossos serviços
