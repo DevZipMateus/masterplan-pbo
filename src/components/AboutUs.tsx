@@ -41,18 +41,18 @@ const AboutUs = () => {
               Sobre a Masterplan
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-gray-800 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               Transformando a gestão financeira há{' '}
-              <span className="text-cyan-600">mais de 15 anos</span>
+              <span className="text-cyan-400">mais de 15 anos</span>
             </h2>
             
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-6 text-lg text-white/90 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <p>
-                A <strong className="text-gray-800">Masterplan BPO Financeiro</strong> nasceu com o propósito de transformar a forma como empresas lidam com sua gestão financeira. Com uma equipe formada por profissionais com mais de 15 anos de experiência no mercado financeiro, unimos conhecimento técnico, visão estratégica e tecnologia para oferecer soluções completas.
+                A <strong className="text-white">Masterplan BPO Financeiro</strong> nasceu com o propósito de transformar a forma como empresas lidam com sua gestão financeira. Com uma equipe formada por profissionais com mais de 15 anos de experiência no mercado financeiro, unimos conhecimento técnico, visão estratégica e tecnologia para oferecer soluções completas.
               </p>
               
               <p>
-                Nossa <strong className="text-cyan-600">missão</strong> é simplificar a rotina financeira dos nossos clientes, garantindo controle, organização e informações confiáveis para decisões mais assertivas.
+                Nossa <strong className="text-cyan-400">missão</strong> é simplificar a rotina financeira dos nossos clientes, garantindo controle, organização e informações confiáveis para decisões mais assertivas.
               </p>
               
               <p>
@@ -63,8 +63,8 @@ const AboutUs = () => {
             {/* Key Achievements */}
             <div className="flex justify-center mt-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-600 mb-2">100%</div>
-                <div className="text-sm text-gray-600">Satisfação dos Clientes</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">100%</div>
+                <div className="text-sm text-white/70">Satisfação dos Clientes</div>
               </div>
             </div>
           </div>
