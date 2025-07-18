@@ -118,8 +118,8 @@ const Contact = () => {
                   <div className="min-w-0">
                     <h4 className="font-semibold text-white mb-1 text-sm sm:text-base">Horário de Atendimento</h4>
                     <p className="text-white/80 text-sm sm:text-base">
-                      Segunda a Sexta: 8h às 18h<br />
-                      Sábado: 8h às 12h
+                      Segunda a Sexta: 07:30h às 17:15h<br />
+                      Sábado e Domingo: Fechado
                     </p>
                   </div>
                 </div>
