@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CheckCircle, Target, Heart, Shield, Lightbulb, Award } from 'lucide-react';
 
@@ -61,17 +60,9 @@ const AboutUs = () => {
             </div>
             
             {/* Key Achievements */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="flex justify-center mt-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">15+</div>
-                <div className="text-sm text-white/80">Anos de Experiência</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">100+</div>
-                <div className="text-sm text-white/80">Empresas Atendidas</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">95%</div>
+                <div className="text-3xl font-bold text-white mb-2">100%</div>
                 <div className="text-sm text-white/80">Satisfação dos Clientes</div>
               </div>
             </div>
