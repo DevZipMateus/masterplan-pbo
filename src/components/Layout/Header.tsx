@@ -76,14 +76,20 @@ const Header = () => {
       </div>
 
       {/* Main Header Content */}
-      <div className="px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 lg:px-8 overflow-visible">
+        <div className="container mx-auto max-w-7xl overflow-visible">
           {/* Main Navigation */}
-          <div className="flex justify-between items-center h-16 sm:h-20 lg:h-24">
-            {/* Logo - Using the same logo as footer */}
-            <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02] flex-shrink-0" aria-label="Ir para página inicial" onClick={handleScrollToTop}>
-              <img src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" className="h-16 sm:h-20 lg:h-24 w-auto transition-all duration-300" />
-            </Link>
+          <div className="flex justify-between items-center h-16 sm:h-20 lg:h-24 overflow-visible">
+            {/* Logo - Larger size with relative positioning */}
+            <div className="relative flex-shrink-0 overflow-visible">
+              <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02] block relative z-10" aria-label="Ir para página inicial" onClick={handleScrollToTop}>
+                <img 
+                  src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
+                  alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" 
+                  className="h-20 sm:h-24 lg:h-28 w-auto transition-all duration-300 relative" 
+                />
+              </Link>
+            </div>
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex space-x-6 xl:space-x-8" role="navigation" aria-label="Menu principal">
