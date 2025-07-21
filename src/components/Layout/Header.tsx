@@ -80,9 +80,9 @@ const Header = () => {
         <div className="container mx-auto max-w-7xl">
           {/* Main Navigation */}
           <div className="flex justify-between items-center h-16 sm:h-20 lg:h-24">
-            {/* Logo - Using the same logo as footer */}
+            {/* Logo - Using the new uploaded logo */}
             <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02] flex-shrink-0" aria-label="Ir para página inicial" onClick={handleScrollToTop}>
-              <img src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" className="h-16 sm:h-20 lg:h-24 w-auto transition-all duration-300" />
+              <img src="/lovable-uploads/a56e295a-a378-4cb5-b4a3-40590bb17ce4.png" alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" className="h-16 sm:h-20 lg:h-24 w-auto transition-all duration-300" />
             </Link>
             
             {/* Desktop Navigation */}
