@@ -24,12 +24,12 @@ export function useIsTablet() {
   const [isTablet, setIsTablet] = React.useState<boolean | undefined>(undefined)
 
   React.useEffect(() => {
-    const mql = window.matchMedia(`(max-width: ${TABLET_BREAKPOINT - 1}px)`)
+    const mql = window.matchMedia(`(min-width: ${MOBILE_BREAKPOINT}px) and (max-width: ${TABLET_BREAKPOINT - 1}px)`)
     const onChange = () => {
-      setIsTablet(window.innerWidth < TABLET_BREAKPOINT && window.innerWidth >= MOBILE_BREAKPOINT)
+      setIsTablet(window.innerWidth >= MOBILE_BREAKPOINT && window.innerWidth < TABLET_BREAKPOINT)
     }
     mql.addEventListener("change", onChange)
-    setIsTablet(window.innerWidth < TABLET_BREAKPOINT && window.innerWidth >= MOBILE_BREAKPOINT)
+    setIsTablet(window.innerWidth >= MOBILE_BREAKPOINT && window.innerWidth < TABLET_BREAKPOINT)
     return () => mql.removeEventListener("change", onChange)
   }, [])
 
@@ -57,4 +57,36 @@ export function useScreenSize() {
   }, [])
 
   return screenSize
+}
+
+// Hook para detectar orientação do dispositivo
+export function useDeviceOrientation() {
+  const [orientation, setOrientation] = React.useState<'portrait' | 'landscape'>('portrait')
+
+  React.useEffect(() => {
+    const updateOrientation = () => {
+      setOrientation(window.innerHeight > window.innerWidth ? 'portrait' : 'landscape')
+    }
+
+    updateOrientation()
+    window.addEventListener('resize', updateOrientation)
+    return () => window.removeEventListener('resize', updateOrientation)
+  }, [])
+
+  return orientation
+}
+
+// Hook para detectar se é um dispositivo touch
+export function useIsTouchDevice() {
+  const [isTouchDevice, setIsTouchDevice] = React.useState(false)
+
+  React.useEffect(() => {
+    const checkTouch = () => {
+      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0)
+    }
+
+    checkTouch()
+  }, [])
+
+  return isTouchDevice
 }

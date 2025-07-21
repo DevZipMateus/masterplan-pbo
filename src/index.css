@@ -127,11 +127,11 @@
   
   /* Custom Masterplan styling */
   .btn-primary {
-    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm font-medium text-sm sm:text-base;
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm font-medium text-xs sm:text-sm md:text-base;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary border border-primary/20 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm font-medium text-sm sm:text-base;
+    @apply bg-white hover:bg-gray-50 text-primary border border-primary/20 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm font-medium text-xs sm:text-sm md:text-base;
   }
   
   /* Card hover effects */
@@ -139,19 +139,19 @@
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
   
-  /* Section styling */
+  /* Section styling - Better responsive padding */
   .section {
-    @apply py-12 sm:py-16 md:py-20;
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
   }
   
   /* Container max widths */
   .container-custom {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    @apply container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl;
   }
   
   /* Navigation link hover effect */
   .nav-link {
-    @apply relative py-2 px-3 sm:px-4 text-gray-700 hover:text-primary transition-colors duration-300 font-medium after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative py-2 px-2 sm:px-3 md:px-4 text-gray-700 hover:text-primary transition-colors duration-300 font-medium after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
   }
   
   /* Floating animation */
@@ -194,10 +194,13 @@
   }
 
   /* Responsive text handling */
-  @media (max-width: 640px) {
-    .text-responsive {
-      font-size: clamp(0.875rem, 4vw, 1rem);
-    }
+  .text-responsive {
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+  }
+  
+  /* Responsive headings */
+  .heading-responsive {
+    font-size: clamp(1.5rem, 5vw, 3rem);
   }
   
   /* Improved mobile touch targets */
@@ -206,5 +209,52 @@
       min-height: 44px;
       min-width: 44px;
     }
+  }
+  
+  /* Better responsive spacing utilities */
+  .spacing-responsive {
+    @apply space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6;
+  }
+  
+  .gap-responsive {
+    @apply gap-2 sm:gap-3 md:gap-4 lg:gap-6;
+  }
+  
+  /* Responsive padding utilities */
+  .padding-responsive {
+    @apply p-2 sm:p-3 md:p-4 lg:p-6;
+  }
+  
+  /* Responsive margin utilities */
+  .margin-responsive {
+    @apply m-2 sm:m-3 md:m-4 lg:m-6;
+  }
+}
+
+/* Additional responsive utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  
+  /* Safe area utilities for mobile devices */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+  
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
   }
 }

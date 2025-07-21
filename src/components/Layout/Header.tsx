@@ -34,25 +34,26 @@ const Header = () => {
 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    handleNavClick(); // Close mobile menu if open
+    handleNavClick();
   };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
-      {/* Contact Info Bar - Hidden on small screens */}
-      <div className="bg-masterplan-teal text-white py-2 px-4 hidden lg:block">
-        <div className="container mx-auto max-w-7xl flex justify-between items-center text-sm">
-          <div className="flex items-center gap-6">
-            <a href="mailto:matheus@masterplanbpo.com.br" className="flex items-center gap-2 hover:text-masterplan-light-blue transition-colors">
-              <Mail size={16} />
-              <span>matheus@masterplanbpo.com.br</span>
+      {/* Contact Info Bar - Better responsive behavior */}
+      <div className="bg-masterplan-teal text-white py-1.5 sm:py-2 px-2 sm:px-4 hidden md:block">
+        <div className="container mx-auto max-w-7xl flex justify-between items-center text-xs sm:text-sm">
+          <div className="flex items-center gap-3 sm:gap-6">
+            <a href="mailto:matheus@masterplanbpo.com.br" className="flex items-center gap-1 sm:gap-2 hover:text-masterplan-light-blue transition-colors">
+              <Mail size={14} className="sm:w-4 sm:h-4" />
+              <span className="hidden lg:inline">matheus@masterplanbpo.com.br</span>
+              <span className="lg:hidden">Email</span>
             </a>
-            <a href="tel:+5516997882208" className="flex items-center gap-2 hover:text-masterplan-light-blue transition-colors">
-              <Phone size={16} />
+            <a href="tel:+5516997882208" className="flex items-center gap-1 sm:gap-2 hover:text-masterplan-light-blue transition-colors">
+              <Phone size={14} className="sm:w-4 sm:h-4" />
               <span>(16) 99788-2208</span>
             </a>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <a 
               href="https://www.linkedin.com/company/masterplanbpofinanceiro/?viewAsMember=true" 
               target="_blank" 
@@ -60,7 +61,7 @@ const Header = () => {
               className="hover:text-masterplan-light-blue transition-colors p-1"
               aria-label="Acesse nosso LinkedIn"
             >
-              <Linkedin size={16} />
+              <Linkedin size={14} className="sm:w-4 sm:h-4" />
             </a>
             <a 
               href="https://www.instagram.com/masterplanbpofinanceiro/" 
@@ -69,56 +70,55 @@ const Header = () => {
               className="hover:text-masterplan-light-blue transition-colors p-1"
               aria-label="Acesse nosso Instagram"
             >
-              <Instagram size={16} />
+              <Instagram size={14} className="sm:w-4 sm:h-4" />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main Header Content */}
-      <div className="px-4 sm:px-6 lg:px-8 overflow-visible">
+      {/* Main Header Content - Better responsive spacing */}
+      <div className="px-3 sm:px-4 lg:px-8 overflow-visible">
         <div className="container mx-auto max-w-7xl overflow-visible">
-          {/* Main Navigation */}
-          <div className="flex justify-between items-center h-16 sm:h-20 lg:h-24 overflow-visible">
-            {/* Logo - Larger size with relative positioning */}
+          <div className="flex justify-between items-center h-14 sm:h-16 md:h-20 lg:h-24 overflow-visible">
+            {/* Logo - Better responsive scaling */}
             <div className="relative flex-shrink-0 overflow-visible">
               <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02] block relative z-10" aria-label="Ir para página inicial" onClick={handleScrollToTop}>
                 <img 
                   src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
                   alt="Masterplan BPO Financeiro - Soluções eficientes para gestão financeira" 
-                  className="h-20 sm:h-24 lg:h-28 w-auto transition-all duration-300 relative" 
+                  className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto transition-all duration-300 relative" 
                 />
               </Link>
             </div>
             
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex space-x-6 xl:space-x-8" role="navigation" aria-label="Menu principal">
-              <button onClick={handleScrollToTop} className="nav-link text-base xl:text-lg">Início</button>
-              <a href="#sobre" className="nav-link text-base xl:text-lg">Sobre</a>
-              <a href="#servicos" className="nav-link text-base xl:text-lg">Serviços</a>
-              <a href="#contato" className="nav-link text-base xl:text-lg">Contato</a>
+            {/* Desktop Navigation - Better spacing */}
+            <nav className="hidden lg:flex space-x-4 xl:space-x-8" role="navigation" aria-label="Menu principal">
+              <button onClick={handleScrollToTop} className="nav-link text-sm xl:text-base">Início</button>
+              <a href="#sobre" className="nav-link text-sm xl:text-base">Sobre</a>
+              <a href="#servicos" className="nav-link text-sm xl:text-base">Serviços</a>
+              <a href="#contato" className="nav-link text-sm xl:text-base">Contato</a>
             </nav>
             
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Better touch target */}
             <button className="lg:hidden text-masterplan-gray hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-md p-2 min-h-[44px] min-w-[44px] flex items-center justify-center" onClick={toggleMobileMenu} aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={isMobileMenuOpen}>
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
         
-        {/* Mobile Navigation Menu */}
+        {/* Mobile Navigation Menu - Better responsive design */}
         <div className={`lg:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}>
-          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-1 border-t mt-2" role="navigation" aria-label="Menu mobile">
-            <button onClick={handleScrollToTop} className="px-4 py-3 text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center text-left">
+          <nav className="container mx-auto px-2 sm:px-4 py-3 sm:py-4 flex flex-col space-y-1 border-t mt-2" role="navigation" aria-label="Menu mobile">
+            <button onClick={handleScrollToTop} className="px-3 sm:px-4 py-3 text-sm sm:text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center text-left">
               Início
             </button>
-            <a href="#sobre" className="px-4 py-3 text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center" onClick={handleNavClick}>
+            <a href="#sobre" className="px-3 sm:px-4 py-3 text-sm sm:text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center" onClick={handleNavClick}>
               Sobre
             </a>
-            <a href="#servicos" className="px-4 py-3 text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center" onClick={handleNavClick}>
+            <a href="#servicos" className="px-3 sm:px-4 py-3 text-sm sm:text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center" onClick={handleNavClick}>
               Serviços
             </a>
-            <a href="#contato" className="px-4 py-3 text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center" onClick={handleNavClick}>
+            <a href="#contato" className="px-3 sm:px-4 py-3 text-sm sm:text-base text-masterplan-gray hover:text-primary hover:bg-gray-50 rounded-md transition-colors min-h-[44px] flex items-center" onClick={handleNavClick}>
               Contato
             </a>
           </nav>
