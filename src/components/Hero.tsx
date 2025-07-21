@@ -27,12 +27,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 w-full">
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-5xl">
-            {/* Logo - Added to hero section */}
+            {/* Logo - Nova logo em tamanho grande */}
             <div className="mb-8 sm:mb-12 lg:mb-16 animate-fade-in">
               <img 
-                src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
+                src="/lovable-uploads/31734b9a-712d-4ca4-9857-2d5292d0be11.png" 
                 alt="Masterplan BPO Financeiro" 
-                className="h-24 sm:h-32 lg:h-40 xl:h-48 w-auto mx-auto filter drop-shadow-lg"
+                className="h-32 sm:h-40 lg:h-52 xl:h-64 w-auto mx-auto filter drop-shadow-lg"
               />
             </div>
             
