@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { Phone, Mail, Linkedin, Instagram, ExternalLink } from 'lucide-react';
+import { Phone, Mail, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-masterplan-dark-gray text-white">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl py-8 sm:py-12 md:py-16 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           
           {/* Company Info - Better responsive layout */}
           <div className="sm:col-span-2 lg:col-span-2">
@@ -45,8 +45,8 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Contact Information - Better mobile layout */}
-          <div className="sm:col-span-1 lg:col-span-1">
+          {/* Contact Information - Better mobile layout with more space */}
+          <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-semibold mb-4 sm:mb-6 lg:mb-8">Contato</h3>
             <ul className="space-y-3 sm:space-y-4 md:space-y-6">
               <li className="flex items-start group">
@@ -64,36 +64,13 @@ const Footer = () => {
                 <div className="min-w-0 flex-1">
                   <a 
                     href="mailto:matheus@masterplanbpo.com.br" 
-                    className="hover:text-primary transition-colors text-sm sm:text-base md:text-lg leading-relaxed block whitespace-nowrap overflow-hidden text-ellipsis"
+                    className="hover:text-primary transition-colors text-sm sm:text-base md:text-lg leading-relaxed block break-words"
                     aria-label="Enviar email para matheus@masterplanbpo.com.br"
                   >
                     matheus@masterplanbpo.com.br
                   </a>
                 </div>
               </li>
-            </ul>
-          </div>
-          
-          {/* Quick Links - Better responsive text */}
-          <div className="sm:col-span-1 lg:col-span-1">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-semibold mb-4 sm:mb-6 lg:mb-8">Links Rápidos</h3>
-            <ul className="space-y-2 sm:space-y-3 md:space-y-4">
-              {[
-                { name: 'Início', href: '#' },
-                { name: 'Sobre Nós', href: '#sobre' },
-                { name: 'Serviços', href: '#servicos' },
-                { name: 'Contato', href: '#contato' }
-              ].map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.href} 
-                    className="hover:text-primary transition-colors duration-300 inline-flex items-center group text-sm sm:text-base md:text-lg"
-                  >
-                    <span>{link.name}</span>
-                    <ExternalLink size={12} className="sm:w-3.5 sm:h-3.5 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                </li>
-              ))}
             </ul>
           </div>
         </div>
