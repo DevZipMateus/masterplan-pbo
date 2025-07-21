@@ -64,7 +64,7 @@ const Footer = () => {
                 <div className="min-w-0 flex-1">
                   <a 
                     href="mailto:matheus@masterplanbpo.com.br" 
-                    className="hover:text-primary transition-colors text-base sm:text-lg leading-relaxed block whitespace-nowrap overflow-hidden text-ellipsis"
+                    className="hover:text-primary transition-colors text-base sm:text-lg leading-relaxed block break-all"
                     aria-label="Enviar email para matheus@masterplanbpo.com.br"
                   >
                     matheus@masterplanbpo.com.br

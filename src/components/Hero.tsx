@@ -27,11 +27,11 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 w-full">
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-5xl">
-            {/* Logo - Updated to use the new uploaded logo */}
+            {/* Logo - Added to hero section */}
             <div className="mb-8 sm:mb-12 lg:mb-16 animate-fade-in">
               <img 
-                src="/lovable-uploads/a7d4d9bd-d6c0-445b-8ec3-100b479ebfe0.png" 
-                alt="BPO Financeiro" 
+                src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
+                alt="Masterplan BPO Financeiro" 
                 className="h-24 sm:h-32 lg:h-40 xl:h-48 w-auto mx-auto filter drop-shadow-lg"
               />
             </div>
