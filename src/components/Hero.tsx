@@ -27,14 +27,25 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 w-full">
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-5xl">
+            {/* Logo - Added to hero section */}
+            <div className="mb-8 sm:mb-12 lg:mb-16 animate-fade-in">
+              <img 
+                src="/lovable-uploads/d9796e93-d2bb-4c59-9858-2a31f9c0e391.png" 
+                alt="Masterplan BPO Financeiro" 
+                className="h-24 sm:h-32 lg:h-40 xl:h-48 w-auto mx-auto filter drop-shadow-lg"
+              />
+            </div>
+            
             {/* Badge */}
-            <div className="inline-block bg-white/90 text-gray-900 font-medium px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm sm:text-base mb-6 sm:mb-8 animate-fade-in shadow-md">
+            <div className="inline-block bg-white/90 text-gray-900 font-medium px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm sm:text-base mb-6 sm:mb-8 animate-fade-in shadow-md" style={{
+              animationDelay: '0.1s'
+            }}>
               Mais de 15 anos de experiência
             </div>
             
             {/* Main Title - Improved responsive typography */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white leading-tight mb-6 sm:mb-8 animate-fade-in" style={{
-              animationDelay: '0.1s',
+              animationDelay: '0.2s',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)'
             }}>
               Transforme a gestão financeira da sua{' '}
@@ -45,7 +56,7 @@ const Hero = () => {
             
             {/* Subtitle - Better spacing and sizing */}
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-8 sm:mb-10 lg:mb-12 animate-fade-in text-white/95 max-w-4xl mx-auto leading-relaxed" style={{
-              animationDelay: '0.2s',
+              animationDelay: '0.3s',
               textShadow: '0 1px 3px rgba(0, 0, 0, 0.7)'
             }}>
               Soluções eficientes para gestão financeira com tecnologia, experiência e 
@@ -54,7 +65,7 @@ const Hero = () => {
             
             {/* Key Benefits - Better mobile layout */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 lg:mb-12 animate-fade-in justify-center items-center" style={{
-              animationDelay: '0.3s'
+              animationDelay: '0.4s'
             }}>
               {[
                 "Transparência total",
@@ -74,7 +85,7 @@ const Hero = () => {
             
             {/* CTA Buttons - Better responsive design */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 animate-fade-in justify-center items-center max-w-2xl mx-auto" style={{
-              animationDelay: '0.4s'
+              animationDelay: '0.5s'
             }}>
               <a 
                 href="https://wa.me/5516997882208" 
